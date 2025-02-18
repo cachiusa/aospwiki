@@ -2,6 +2,10 @@
 ![](https://siddroid.com/images/siddroid-aosp-android-platform-engineering-thumb.png)
 <p class=imgdesc>The bare-bone setup for Android System Building on Ubuntu</p>
 
+Android has been around since November 2007, and today, it’s an impressive 18 years old. With a staggering 3 billion devices running Android, it’s one of the largest and most influential operating systems globally. The evolution has been phenomenal, and with countless new features and smartphones being released by various OEMs, there’s never been a more exciting time to dive into Android platform engineering.
+
+Ready to build your own Android?
+
 This article is your ultimate guide, taking you from the initial machine setup for building AOSP, and IDE configurations, to booting your very first Android system image on a compatible device. Let’s get started!
 
 ## TLDR
@@ -378,4 +382,4 @@ I am not a custom ROM developer or a device maintainer on XDA, a question often 
 
 ---
 
-Archived from https://siddroid.com/post/android/the-starter-kit-for-android-platform-engineering
+Archived from https://siddroid.com/post/android/the-starter-kit-for-android-platform-engineering (2024/06/21)
