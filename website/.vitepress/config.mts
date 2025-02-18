@@ -14,7 +14,7 @@ export default defineConfig({
     base: '/aospwiki/',
 
     head: [
-        ['link', { rel: 'icon', href: '/aospwiki/favicon.svg' }],
+        ['link', { rel: 'icon', href: '/aospwiki/asfp.svg' }],
         ['style',
             { type: "text/css" },
             `.imgdesc { text-align:center;color:grey;font-style:italic; }`
@@ -35,7 +35,7 @@ export default defineConfig({
 
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
-        logo: "/favicon.svg",
+        logo: "/asfp.svg",
 
         nav: topbar,
 
