@@ -1,7 +1,7 @@
 import { defineConfig } from "vitepress";
 import { tabsMarkdownPlugin } from "vitepress-plugin-tabs";
-import leftbar from "../docs/_leftbar.json";
-import topbar from "../docs/_topbar.json";
+import leftbar from "../_leftbar.json";
+import topbar from "../_topbar.json";
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -14,11 +14,7 @@ export default defineConfig({
     base: '/aospwiki/',
 
     head: [
-        ['link', { rel: 'icon', href: '/aospwiki/asfp.svg' }],
-        ['style',
-            { type: "text/css" },
-            `.imgdesc { text-align:center;color:grey;font-style:italic; }`
-        ]
+        ['link', { rel: 'icon', href: '/aospwiki/asfp.svg' }]
     ],
 
     markdown: {
