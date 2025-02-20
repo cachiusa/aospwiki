@@ -3,10 +3,6 @@
         { "text": "Wiki", "items": [
             { "text": "Home", "link": "/" },
             { "text": "Credits", "link": "/credits" }
-        ]},
-        { "text": "AOSP Development", "items": [
-            { "text": "Getting started", "link": "/getting-started" },
-            { "text": "Superproject", "link": "/superproject" }
         ]}
     ]
 }
