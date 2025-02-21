@@ -4,21 +4,21 @@ import leftbar from "../_leftbar.json";
 import topbar from "../_topbar.json";
 
 const sitename = "Baklava"
-const siterepo = "baklava"
-const siteslug = `/${siterepo}`
+const sitegithub = "cachiusa/baklava"
+const sitebase = "/baklava/"
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
     title: sitename,
-    description: "",
+    description: "A community-driven wiki of the Android Platform",
 
     srcDir: "docs",
     cleanUrls: true,
 
-    base: `${siteslug}/`,
+    base: sitebase,
 
     head: [
-        ["link", { rel: "icon", href: `${siteslug}/asfp.svg` }]
+        ["link", { rel: "icon", href: `${sitebase}icons/asfp.svg` }]
     ],
 
     markdown: {
@@ -35,7 +35,7 @@ export default defineConfig({
 
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
-        logo: "/asfp.svg",
+        logo: "/icons/asfp.svg",
 
         nav: topbar,
 
@@ -44,13 +44,13 @@ export default defineConfig({
         },
 
         editLink: {
-            pattern: `https://github.com/cachiusa/${siterepo}/edit/main/docs/:path`
+            pattern: `https://github.com/${sitegithub}/edit/main/docs/:path`
         },
 
         lastUpdated: {
             formatOptions: {
                 dateStyle: "short",
-                timeStyle: "short"
+                timeStyle: undefined
             }
         },
 
@@ -59,7 +59,7 @@ export default defineConfig({
         externalLinkIcon: true,
 
         socialLinks: [
-            { icon: "github", link: `https://github.com/cachiusa/${siterepo}` },
+            { icon: "github", link: `https://github.com/${sitegithub}` },
         ],
 
         outline: "deep",

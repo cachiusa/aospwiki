@@ -3,7 +3,6 @@
         { "text": "Wiki", "items": [
             { "text": "Home", "link": "/" },
             { "text": "Credits", "link": "/credits" },
-            { "text": "Contact", "link": "/contact" },
             { "text": "License", "link": "/license" }
         ]}
     ],
@@ -19,7 +18,7 @@
 
         { "text": "General", "items": [
             { "text": "Android distributions", "link": "/community/distributions" },
-            { "text": "Rooting", "link": "/community/root" },
+            { "text": "AOSP - Build guide", "link": "/community/getting-started" },
             { "text": "Legacy articles", "link": "/community/legacy-articles" }
         ]},
 
@@ -27,15 +26,19 @@
             { "text": "Beginner's guide", "link": "/community/device-bringup" }
         ]},
 
-        { "text": "OEM Knowledege Base", "link": "/community/oem", "items": [
+        { "text": "OEM Knowledege Base", "items": [
             { "text": "Google", "link": "/community/oem/google" },
             { "text": "Qualcomm", "link": "/community/oem/qualcomm" },
             { "text": "Samsung", "link": "/community/oem/samsung" },
             { "text": "Xiaomi", "link": "/community/oem/xiaomi" }
-        ]},
+        ], "link": "/community/oem", "collapsed": true },
 
         { "text": "Miscellaneous", "items": [
             { "text": "Prebuilt toolchains", "link": "/community/prebuilt-toolchains" }
+        ]},
+
+        { "text": "Rooting", "items": [
+            { "text": "Information", "link": "/community/root" }
         ]}
     ]
 }

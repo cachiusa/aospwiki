@@ -1,5 +1,9 @@
+---
+lastUpdated: 2025-02-15
+---
+
 # Prebuilt toolchains to build Android and Linux kernel
-Last updated: 2025/02/15
+
 ## Clang/LLVM
 | Maintainer | Links | Status | Comment |
 |-|-|-|-|

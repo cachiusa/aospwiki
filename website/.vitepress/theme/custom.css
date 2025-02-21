@@ -1,15 +1,16 @@
 p.imgdesc {
-    text-align: center;
     color: grey;
     font-style: italic;
+    font-weight: bold;
+    text-align: center;
 }
 
-/* Expands logo size */
+/* Expand logo size */
 :root {
     --vp-nav-logo-height: 32px;
 }
 
-/* Do not use fixed width for main content */
+/* Do not limit max width */
 :root {
     --vp-layout-max-width: calc(98% + 64px);
     --vp-sidebar-width: 300px;
@@ -17,4 +18,12 @@ p.imgdesc {
 
 .VPDoc.has-aside .content-container {
     max-width: unset !important;
+}
+
+/* Custom brand colors */
+:root {
+    --vp-c-brand-1: var(--vp-c-green-1);
+    --vp-c-brand-2: var(--vp-c-green-2);
+    --vp-c-brand-3: var(--vp-c-green-3);
+    --vp-c-brand-soft: var(--vp-c-green-soft);
 }

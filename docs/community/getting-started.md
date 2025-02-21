@@ -1,8 +1,12 @@
 ---
-lastUpdated: 2025-02-21
+lastUpdated: 2025-02-22
 ---
 
 # The Starter kit for Android Platform Engineering
+Archive of https://siddroid.com/post/android/the-starter-kit-for-android-platform-engineering (2024-06-21)
+
+Author: [@Siddroid](https://twitter.com/Siddroid)
+
 ![](https://siddroid.com/images/siddroid-aosp-android-platform-engineering-thumb.png)
 <p class=imgdesc>The bare-bone setup for Android System Building on Ubuntu</p>
 
@@ -381,7 +385,3 @@ Before Android, I spent a considerable time building aftermarket Symbian OS buil
 Building mobile operating systems is really cool. I must say this, it has always given me greater satisfaction as a developer than app development.
 
 I am not a custom ROM developer or a device maintainer on XDA, a question often asked by other developers, Googlers, or ROM maintainers at public conferences. My interest in the Android OS has always been purely academic, and I believe that you – the reader, share this same passion.
-
----
-
-Archived from https://siddroid.com/post/android/the-starter-kit-for-android-platform-engineering (2024/06/21)
