@@ -5,7 +5,7 @@ import topbar from "../_topbar.json";
 
 const sitename = "Baklava"
 const siterepo = "baklava"
-const siteslug = `${siterepo}/`
+const siteslug = `/${siterepo}`
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -15,10 +15,10 @@ export default defineConfig({
     srcDir: "docs",
     cleanUrls: true,
 
-    base: `/${siteslug}`,
+    base: `${siteslug}/`,
 
     head: [
-        ["link", { rel: "icon", href: `/${siteslug}asfp.svg` }]
+        ["link", { rel: "icon", href: `${siteslug}/asfp.svg` }]
     ],
 
     markdown: {
@@ -44,7 +44,7 @@ export default defineConfig({
         },
 
         editLink: {
-            pattern: `https://github.com/cachiusa/${siteslug}edit/main/docs/:path`
+            pattern: `https://github.com/cachiusa/${siterepo}/edit/main/docs/:path`
         },
 
         lastUpdated: {
@@ -59,7 +59,7 @@ export default defineConfig({
         externalLinkIcon: true,
 
         socialLinks: [
-            { icon: "github", link: `https://github.com/cachiusa/${siteslug}` },
+            { icon: "github", link: `https://github.com/cachiusa/${siterepo}` },
         ],
 
         outline: "deep",
