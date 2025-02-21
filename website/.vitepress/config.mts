@@ -3,18 +3,22 @@ import { tabsMarkdownPlugin } from "vitepress-plugin-tabs";
 import leftbar from "../_leftbar.json";
 import topbar from "../_topbar.json";
 
+const sitename = "Baklava"
+const siterepo = "baklava"
+const siteslug = `${siterepo}/`
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-    title: "AOSPWiki",
+    title: sitename,
     description: "",
 
     srcDir: "docs",
     cleanUrls: true,
 
-    base: '/aospwiki/',
+    base: `/${siteslug}`,
 
     head: [
-        ['link', { rel: 'icon', href: '/aospwiki/asfp.svg' }]
+        ["link", { rel: "icon", href: `/${siteslug}asfp.svg` }]
     ],
 
     markdown: {
@@ -40,13 +44,13 @@ export default defineConfig({
         },
 
         editLink: {
-            pattern: "https://github.com/cachiusa/aospwiki/edit/main/docs/:path"
+            pattern: `https://github.com/cachiusa/${siteslug}edit/main/docs/:path`
         },
 
         lastUpdated: {
             formatOptions: {
-                dateStyle: 'short',
-                timeStyle: 'short'
+                dateStyle: "short",
+                timeStyle: "short"
             }
         },
 
@@ -55,7 +59,7 @@ export default defineConfig({
         externalLinkIcon: true,
 
         socialLinks: [
-            { icon: "github", link: "https://github.com/cachiusa/aospwiki" },
+            { icon: "github", link: `https://github.com/cachiusa/${siteslug}` },
         ],
 
         outline: "deep",

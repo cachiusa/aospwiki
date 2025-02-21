@@ -2,7 +2,40 @@
     "/": [
         { "text": "Wiki", "items": [
             { "text": "Home", "link": "/" },
-            { "text": "Credits", "link": "/credits" }
+            { "text": "Credits", "link": "/credits" },
+            { "text": "Contact", "link": "/contact" },
+            { "text": "License", "link": "/license" }
+        ]}
+    ],
+    "/architecture/": [
+        { "text": "Android Platform", "items": [
+            { "text": "Overview", "link": "/architecture/" },
+            { "text": "Build system", "link": "/architecture/build-system" },
+            { "text": "Superproject", "link": "/architecture/superproject" }
+        ]}
+    ],
+    "/community/": [
+        { "text": "Community resources", "link": "/community" },
+
+        { "text": "General", "items": [
+            { "text": "Android distributions", "link": "/community/distributions" },
+            { "text": "Rooting", "link": "/community/root" },
+            { "text": "Legacy articles", "link": "/community/legacy-articles" }
+        ]},
+
+        { "text": "Device bringup", "items": [
+            { "text": "Beginner's guide", "link": "/community/device-bringup" }
+        ]},
+
+        { "text": "OEM Knowledege Base", "link": "/community/oem", "items": [
+            { "text": "Google", "link": "/community/oem/google" },
+            { "text": "Qualcomm", "link": "/community/oem/qualcomm" },
+            { "text": "Samsung", "link": "/community/oem/samsung" },
+            { "text": "Xiaomi", "link": "/community/oem/xiaomi" }
+        ]},
+
+        { "text": "Miscellaneous", "items": [
+            { "text": "Prebuilt toolchains", "link": "/community/prebuilt-toolchains" }
         ]}
     ]
 }

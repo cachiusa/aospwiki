@@ -1,3 +1,7 @@
+---
+lastUpdated: 2025-02-21
+---
+
 # The Starter kit for Android Platform Engineering
 ![](https://siddroid.com/images/siddroid-aosp-android-platform-engineering-thumb.png)
 <p class=imgdesc>The bare-bone setup for Android System Building on Ubuntu</p>
@@ -58,7 +62,7 @@ The machine I use has a [13th Gen Intel i7-13700](https://www.intel.com/content/
 ::: info
 I chose this spec as it was the best I could find. I also think the compile time is still decent enough for a complete build. Depending on your budget for your system, you can look for decent alternatives with higher thread counts.
 :::
-fast_forward
+
 ### Fast Memory for IDEs and Code Compilation
 Having ample memory enables concurrent Android development and coding. Given its vast scale, opening the AOSP in an IDE could overwhelm a system with limited memory. The Android Open Source Project primarily comprises Java and C++ files, demanding sufficient memory for effective development and compilation.
 
@@ -68,7 +72,6 @@ I’ve observed memory usage ranging between 12 to 30GB during different tasks w
 
 We will set-up an IDE in the later part of this article and use tools for importing the Android Framework packages into the IDE for daily development.
 
-sd_card
 ### NVMe Storage for fast access
 Synchronizing the entire Android source and building a single specified target can occupy up to 500GB of storage. As the system compiles Android using Soong, it simultaneously writes out the compiled files. Opting for fast read-write storage facilitates quick access to source code within your preferred IDE, as well as faster compilation.
 
@@ -78,22 +81,20 @@ We will learn how to setup dedicated `out` directories on multi-disc / drive env
 
 Personally, my system is equipped with [2TB of NVMe storage](https://www.samsung.com/de/memory-storage/nvme-ssd/980-pro-pcle-4-0-nvme-m-2-ssd-500gb-mz-v8p500bw/), 2TB of solid-state drive storage, and an additional 1TB of high-speed SATA storage.
 
-cloud_sync
 ### Network
 At first sync, AOSP is about 200-300GB in size. Consider a decent enough internet connection for fast sync of the source as you will be pulling in new changes while you develop for the platform.
 
-build
 ## Setting up the build environment
 In all practicality consider setting up a 64-bit environment on your machine. Setup your machine with a Long-term support release of Ubuntu. You can download the latest installation images [here](https://ubuntu.com/download/desktop).
 
 Earlier versions of Android can be compiled on Mac OS. Current-gen Apple devices with Apple Silicon still run into incompatibility issues as many libs used for building AOSP are specifically for X86_64 systems and Apple Silicon uses Arm64.
 
-sync
 ### Creating the source directory
 Create a dedicated directory for syncing the Android source using the file manager or via mkdir. From our example:
 ```
 /Projects/AOSP/
 ```
+
 ### Setup tools for syncing
 Install dependencies, build-essentials and libs on your system for building on Ubuntu
 ```
@@ -106,11 +107,13 @@ Install repo on your system using apt-get
 ```
 sudo apt-get install repo
 ```
+
 ### Initializing Android repo
 Once repo has been setup along with all the build dependencies we can start cloning the source to our machine. Navigate to your project directory and initialize repo via
 ```
 repo init --partial-clone -b main -u https://android.googlesource.com/platform/manifest
 ```
+
 ### Syncing
 Sync the repo and start downloading the source to your local directory.
 ```
@@ -118,7 +121,6 @@ repo sync -j8
 ```
 This will launch 8 sync jobs and start fetching AOSP, you can also use the -c flag to sync the current manifest. Depending on your internet connection and server latencies the sync may take time.
 
-rocket
 ## Compiling the Android OS
 With the majority of our build setup complete, we can finally proceed to building the system images and compiling the Android OS. In this example, we are building AOSP for the Google Pixel 6A (bluejay).
 
@@ -136,7 +138,6 @@ sudo extract-google_devices-bluejay.sh
 ```
 Make sure you run it in sudo as the script needs permissions to write in certain directories.
 
-lunch_dining
 ### Lunch Time
 Before we go and grab our favorite snack, let’s setup a fresh build for compilation. By the time you are back, Android should have compiled for your device and we will proceed to booting it on the physical device.
 
@@ -145,6 +146,7 @@ Prepare the execution environment with the following command
 ```
 source build/envsetup.sh
 ```
+
 #### Identifying build target
 Build targets are like recipes we pass as args to the `lunch` command line utility to compile the source for a specific target. The format of a build target is a string consisting of the target, release, and variant like `target-release-variant`.
 
@@ -218,7 +220,7 @@ It’s important to pay attention to your CPU temperatures, as they can rise sig
 
 ## Successful Android Build
 Upon completion of the build your console output should indicate the following
-```
+```txt{3}
 [100% 44162/44162 0s remaining] Target vbmeta image: out/target/product/bluejay/
 
 ##### build completed successfully (16:52 (mm:ss)) ####

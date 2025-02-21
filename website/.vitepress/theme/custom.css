@@ -1,5 +1,20 @@
-.imgdesc {
+p.imgdesc {
     text-align: center;
     color: grey;
     font-style: italic;
+}
+
+/* Expands logo size */
+:root {
+    --vp-nav-logo-height: 32px;
+}
+
+/* Do not use fixed width for main content */
+:root {
+    --vp-layout-max-width: calc(98% + 64px);
+    --vp-sidebar-width: 300px;
+}
+
+.VPDoc.has-aside .content-container {
+    max-width: unset !important;
 }
