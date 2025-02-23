@@ -14,7 +14,9 @@ This project is dedicated to keeping up with the latest developments in the Andr
 [Community resources](community/index.md)
 :::
 
-You can always return to this page by clicking on the top-left logo
+You can always return to this page by clicking on the top-left logo.
+
+Use the search bar above or press `Ctrl` + `K` to quickly navigate this site.
 
 ## Give back
 There are a lot of ways you can contribute to Baklava. The easiest way to get started is to use it and spread the word to your friends.
