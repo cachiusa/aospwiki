@@ -1,14 +1,14 @@
 # Factory Reset Protection
-## Overview
+## Background
 Google's Factory Reset Protection (FRP) ties devices to a Google account using a tiny, special region of persistent state.
-* This data will live across factory resets not initiated via the Settings UI
-* When a device is factory reset through Settings this data is wiped
+- This data will live across factory resets not initiated via the Settings UI
+- When a device is factory reset through Settings this data is wiped
 
 It prevents a thief from wiping the device to a fresh state for resale without being stuck at a screen for authenticating with the Google account persisted on the device after wiping.
 
-Google's approach works well because if users forget their Google password, there are account recovery methods available to avoid a bricked phone.
-
 > This is strictly a theft deterrence feature, not a security feature, and the standard implementation depends on having the device tied to an account on an online service. The only advantage would be encouraging thieves to return a stolen device for a potential reward after realizing that it has no value beyond scrapping it for parts.
+
+Google's approach works well because if users forget their Google password, there are account recovery methods available to avoid a bricked phone.
 
 This feature is implemented in both Android Setup (com.google.android.setupwizard) and `PersistentDataBlockManager` service on Android 5+ devices.
 
