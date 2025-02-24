@@ -1,0 +1,1 @@
+https://github.com/chiteroman/Reprogram-TEE-on-Qualcomm-devices

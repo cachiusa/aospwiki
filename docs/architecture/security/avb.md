@@ -26,9 +26,9 @@ The bootloader communicates Verified Boot state to Android through
 - bootconfig (Android 12+)
 
 It sets the `androidboot.verifiedbootstate` option to one of the following values:
-- green: if device is LOCKED and user-settable root of trust isn't used
-- yellow: if device is LOCKED and user-settable root of trust is used
-- orange: if device is UNLOCKED
+- green
+- yellow
+- orange
 
 https://source.android.com/docs/security/features/verifiedboot/avb
 https://android.googlesource.com/platform/external/avb/+/main/README.md
