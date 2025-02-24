@@ -13,7 +13,9 @@ Google's approach works well because if users forget their Google password, ther
 This feature is implemented in both Android Setup (com.google.android.setupwizard) and `PersistentDataBlockManager` service on Android 5+ devices.
 
 ## Persistent data block (PDB)
-You can query the PDB partition by looking for `ro.frp.pst` in system properties or by running `getprop`. Alternatively, find FRP related entries in `ueventd.rc`
+Contains FRP data. Also stores OEM unlock status
+
+The PDB partition can be queried by looking for `ro.frp.pst` in system properties or using `getprop`. Alternatively, find FRP related entries in `ueventd.rc`
 
 Commonly used partitions:
 - `config`
@@ -21,20 +23,21 @@ Commonly used partitions:
 - `persistent`
 - `presistdata`
 
+### Layout
+(TBA)
+
 ## Activation
 When FRP is active,
 - Android Setup will show a notification with the icon ![padlock](./lock.svg) in the status bar
 - (TBA)
 
 ## Deactivation
-
-
-There are many known methods to get around FRP, varying based on the device's OEM and OS version. Most of them usually come down to the following:
-- Erase `frp` partition through custom recovery, bootloader mode, etc.
-- Remove/unset `ro.frp.pst` from system properties to disable PDB manager
+There are many known methods to get around FRP, varying based on the device OS distribution and version. Most of them usually come down to the following:
+- Erase PDB partition through custom recovery, bootloader mode, etc.
+- Remove/unset `ro.frp.pst` from system properties to disable PDB manager/service
 - Overwrite `user_setup_complete` or similar flags in secure settings to skip Android Setup
 - Launch Android settings and set a screen lock, overwriting FRP credentials
-- Install custom Google Account Manager (`com.google.android.gsf.login`) that accepts adding another account, overwriting FRP credentials
+- Install custom Google Account Manager (`com.google.android.gsf.login`), add another account, overwriting FRP credentials
 
 https://grapheneos.org/faq#anti-theft
 
@@ -49,8 +52,7 @@ If this key is filled with zeroes, FRP will be disabled entirely (meaning no sig
 When secret key is wiped from `/data` but not the PDB (meaning there may have been an untrusted reset), FRP is in "activated" state, therefore:
 - Writing data on the PDB is blocked by PDB service
 - Setting a screen lock is blocked
-- Package installer (com.android.packageinstaller) prevents installing new apps
-- The user must provide a key that matches the secrets on the PDB (by signing in with the owner's Google account)
+- Package installer (com.android.packageinstaller) blocks installing new apps
 
 Additionally, the PDB partition layout has been updated as follows:
 ::: details
@@ -90,8 +92,12 @@ Additionally, the PDB partition layout has been updated as follows:
 ```
 :::
 
+### PersistentDataBlockManager
+Interface to the persistent data partition. Provides access to information about the state of factory reset protection.
+
 https://www.androidauthority.com/android-15-factory-reset-protection-upgrades-3479431/
-
+https://developer.android.com/reference/android/service/persistentdata/PersistentDataBlockManager
 https://android.googlesource.com/platform/frameworks/base/+/ebe3ba8767153120ab0081654b30dfffea5ed15b%5E%21/
-
-https://android.googlesource.com/platform/frameworks/base/+/refs/heads/android15-release/core/java/android/service/persistentdata/PersistentDataBlockManager.java
+https://android.googlesource.com/platform/frameworks/base/+/refs/heads/main/services/core/java/com/android/server/pdb/PersistentDataBlockService.java
+https://android.googlesource.com/platform/frameworks/base/+/master/core/java/android/service/persistentdata/PersistentDataBlockManager.java
+https://android.googlesource.com/platform/frameworks/base/+/master/services/core/jni/com_android_server_PersistentDataBlockService.cpp
