@@ -10,5 +10,6 @@ Keymaster Trusted Application (TA) is a HAL
 
 ---
 https://source.android.com/docs/security/features/keystore
+https://developer.android.com/privacy-and-security/keystore
 https://github.com/shakevsky/keybuster
 https://www.usenix.org/system/files/sec22-shakevsky.pdf

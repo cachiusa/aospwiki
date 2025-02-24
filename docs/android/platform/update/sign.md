@@ -1,0 +1,1 @@
+https://source.android.com/docs/core/ota/sign_builds
