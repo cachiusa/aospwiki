@@ -1,4 +1,6 @@
 * fix dead links
+* fix leftbar & topbar
+* squash once website is stable
 
 * apex
 * telephony
