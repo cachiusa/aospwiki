@@ -18,7 +18,7 @@ export default defineConfig({
     base: sitebase,
 
     head: [
-        ["link", { rel: "icon", href: `${sitebase}icons/asfp.svg` }]
+        ["link", { rel: "icon", href: `${sitebase}favicon.svg` }]
     ],
 
     markdown: {
