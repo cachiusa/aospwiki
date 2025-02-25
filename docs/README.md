@@ -1,5 +1,5 @@
 # Baklava
-![Site logo](/icons/asfp.svg)
+![Site logo](/icons/studio_platform.svg)
 ## About this wiki
 A wide range of resources on AOSP development can be found across various platforms and forums. However, many of these have become outdated as Android continues to evolve, with new features introduced and older ones deprecated over time.
 

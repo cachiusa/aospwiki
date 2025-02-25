@@ -35,7 +35,7 @@ export default defineConfig({
 
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
-        logo: "/icons/asfp.svg",
+        logo: "/icons/studio_platform.svg",
 
         nav: topbar,
 
