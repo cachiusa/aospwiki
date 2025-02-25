@@ -7,11 +7,11 @@ This project is dedicated to keeping up with the latest developments in the Andr
 
 ## Get started
 ::: tip Learn AOSP
-[Android Platform architecture](architecture/index.md)
+[Android Platform architecture](android/platform/index.md)
 :::
 
 ::: warning Read guides
-[Community resources](community/index.md)
+[Community resources](android/community/index.md)
 :::
 
 You can always return to this page by clicking on the top-left logo.

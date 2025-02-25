@@ -20,3 +20,4 @@
 * safe boot mode
 * safetynet
 * update_engine
+* https://source.android.com/docs/core/ota/ab/ab_implement

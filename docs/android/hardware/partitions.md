@@ -87,6 +87,8 @@ Qualcomm-specific?
 Stores bootloader unlock status. If this partition is erased, bootloader will relock
 ## dsp
 Filesystem type: ext4
+https://usermanual.wiki/Document/80VB419108HexagonDSPUserGuide.845180635.pdf
+
 ## featenabler
 Type: mbn
 ## ffu
